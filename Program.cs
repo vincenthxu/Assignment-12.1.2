@@ -7,4 +7,10 @@
             Console.WriteLine("Hello, World!");
         }
     }
+
+    internal class ListNode
+    {
+        int val { get; set; }
+        ListNode next { get; set; }
+    }
 }
