@@ -76,6 +76,29 @@
 
             return true;
         }
+
+        static bool IsPalindromeV2(ListNode head)
+        {
+            int numElements = 0;
+            Stack<int> stack = new();
+
+            ListNode curr = head;
+            while(curr != null)
+            {
+                stack.Push(curr.val);
+                curr = curr.next;
+                numElements++;
+            }
+
+            curr = head;
+            for(int count = 0; count < numElements / 2; count++)
+            {
+                if (stack.Pop() != curr.val) return false;
+                curr = curr.next;
+            }
+
+            return true;
+        }
     }
 
     public class ListNode
