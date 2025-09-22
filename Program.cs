@@ -19,7 +19,7 @@
             foreach (var head in testCases)
             {
                 PrintLinkedList(head);
-                Console.WriteLine($"IsPalindrome: {IsPalindrome(head)}");
+                Console.WriteLine($"IsPalindrome: {IsPalindrome(head)} {IsPalindromeV2(head)}");
             }
         }
 
