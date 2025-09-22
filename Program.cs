@@ -6,6 +6,25 @@
         {
             Console.WriteLine("Hello, World!");
         }
+
+        static ListNode? CreateLinkedList(int[] values)
+        {
+            if (values.Length == 0) return null;
+
+            ListNode head = new();
+            ListNode curr = head;
+
+            int i = 0;
+            foreach (int value in values)
+            {
+                curr.val = value;
+                if (i++ < values.Length - 1)
+                    curr.next = new();
+                curr = curr.next;
+            }
+
+            return head;
+        }
     }
 
     public class ListNode
