@@ -37,6 +37,31 @@
 
             return head;
         }
+
+        static bool IsPalindrome(ListNode head)
+        {
+            // FIXME: using redundant space
+            Stack<int> stack = new();
+            Queue<int> queue = new();
+
+            ListNode curr = head;
+            while(curr != null)
+            {
+                stack.Push(curr.val);
+                queue.Enqueue(curr.val);
+                curr = curr.next;
+            }
+
+            while(stack.Count > 0 && queue.Count > 0)
+            {
+                if(stack.Pop() != queue.Dequeue())
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 
     public class ListNode
