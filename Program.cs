@@ -8,9 +8,9 @@
         }
     }
 
-    internal class ListNode
+    public class ListNode
     {
-        int val { get; set; }
-        ListNode next { get; set; }
+        public int val { get; set; }
+        public ListNode? next { get; set; } = null;
     }
 }
