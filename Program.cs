@@ -7,6 +7,18 @@
             Console.WriteLine("Hello, World!");
         }
 
+        static void PrintLinkedList(ListNode? head)
+        {
+            ListNode? curr = head;
+            Console.Write("[ ");
+            while (curr != null)
+            {
+                Console.Write(curr.val + $"{(curr.next == null ? "" : " => ")}");
+                curr = curr.next;
+            }
+            Console.WriteLine(" ]");
+        }
+
         static ListNode? CreateLinkedList(int[] values)
         {
             if (values.Length == 0) return null;
