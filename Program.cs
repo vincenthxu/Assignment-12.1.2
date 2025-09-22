@@ -4,7 +4,21 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            List<int[]> arrays =
+            [
+                [1,2,2,1],
+                [1,2],
+                [1],
+                [],
+            ];
+
+            var testCases = arrays.Select(array => CreateLinkedList(array));
+
+            foreach (var head in testCases)
+            {
+                PrintLinkedList(head);
+                Console.WriteLine($"IsPalindrome: {IsPalindrome(head)}");
+            }
         }
 
         static void PrintLinkedList(ListNode? head)
